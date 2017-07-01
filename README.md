@@ -1,3 +1,6 @@
+
+PHP Version of this script also available in the file section.
+
 [![Build Status](https://travis-ci.org/riichard/boolean-parser-js.svg?branch=master)](https://travis-ci.org/riichard/boolean-parser-js) [![Join the chat at https://gitter.im/riichard/boolean-parser-js](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/riichard/boolean-parser-js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 # Boolean-parser
@@ -68,6 +71,17 @@ var parsedQuery = booleanParser.parseBooleanQuery(searchPhrase);
 //  ['i'],['j']]
 ```
 
+## Usage
+
+``````PHP
+
+Include Boolean-Parser.php page.
+
+$searchPhrase = '((a AND (b OR c)) AND (d AND e) AND (f OR g OR h)) OR i OR j';
+print_r(parseBooleanQuery($searchPhrase));
+
+
+
 ## Use cases
 This tool is great when constructing complex search filters that need to be matched with text. Creating search tools that need to show up more refined results than that would be possible with a simple `AND` combination.
 
@@ -135,3 +149,5 @@ Out:
     [ a, b ], [ c ], [ d ], [ e ], [ f, g ]
 ]
 ```
+
+
